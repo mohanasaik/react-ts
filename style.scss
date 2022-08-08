@@ -1,0 +1,113 @@
+.test {
+  text-align: center;
+}
+
+.App {
+  max-width: 900px;
+  margin: 10px auto;
+  font-family: Montserrat;
+  .weather-grid {
+    border: 6px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 14px 5px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    font-weight: 300;
+  }
+  .cities {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 40px auto;
+    .active {
+      color: deepskyblue;
+      font-weight: bold;
+    }
+    span {
+      cursor: pointer;
+    }
+  }
+  .hero {
+    display: flex;
+    min-height: 300px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
+    h2 {
+      font-size: 30px;
+      margin: 0px;
+    }
+    .temp {
+      font-size: 85px;
+    }
+    img {
+      width: 350px;
+    }
+    .inner {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .day-card {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: -webkit-fill-available;
+    padding-bottom: 25px;
+    img {
+      width: 100px;
+    }
+    .temp {
+      font-size: 38px;
+    }
+    &:not(:last-child) {
+      border-top: 6px solid #fff;
+      border-right: 6px solid #fff;
+    }
+    &:last-child {
+      border-top: 6px solid #fff;
+    }
+  }
+  .four-days-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .temp {
+    font-family: Teko;
+    font-weight: 500;
+    margin: 0px;
+    line-height: 1;
+  }
+  .temp::after {
+    content: '\00b0';
+  }
+  img {
+    filter: drop-shadow(10px 10px 5px lightblue);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cities {
+    flex-direction: column;
+    align-items: center;
+  }
+  .four-days-container {
+    flex-direction: column;
+  }
+  .hero .inner {
+    flex-direction: column;
+  }
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: aliceblue;
+  font-family: Montserrat;
+}
